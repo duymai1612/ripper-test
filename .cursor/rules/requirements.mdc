@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Required technologies:
+- React Native (you can use Expo if you want)
+- react-navigation for navigation system
+
+Other than that, you can use any library you want to implement the booking list and the mock API logic, as long as it conforms with the requirements below.
+
+1. Login
+- Submit button is only enabled when both the email and password are filled
+- Navigates to Home screen when pressing submit button
+- No validations or API calls needed 
+2. Home
+- Each booking has:
+  + Sport: can either be “Acrobatics”, “Dance”, “Archery” or “Yoga”, each sport has it’s own icon
+  + Start datetime
+  + End datetime
+- Bookings should be grouped and sectioned by start date
+- Should be an infinite scrolling list, each time we load 25 new bookings
+- The list must have high performance, even with many items loaded
+- Mock an API in the code to return bookings:
+  + The sport is randomized between 4 available sports: Acrobatics, Dance, Archery, Yoga, each sport has it’s own icon
+  + The start date should be increasingly further away into the future the more you scroll down
+  + The start time is randomized within [0:00] to [23:55], only 5-minute intervals are allowed, for example 10:15
+  + The end date must be the same as start date
+  + The end time is randomized within [start time] to [24:00], only 5-minute intervals are allowed, for example 12:25
+  + The amount of bookings per date is randomized between 1 and 3
+  + The starting date of the first booking in the list should be 16 December 2024
+
+Last but not least features:
+- You setup a theme system where the colors can be easily replaced, or switch between dark/light mode
+- You add email validations to Login screen with error toasts in the top right
+- You use a time library that can handle time zones to generate and format the time on bookings
