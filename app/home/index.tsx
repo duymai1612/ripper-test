@@ -1,10 +1,11 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import { View, Text, FlatList, ActivityIndicator, SectionList } from 'react-native';
+import { View, Text, ActivityIndicator, SectionList } from 'react-native';
 import { useTheme } from '../../services/constants/ThemeContext';
 import { createStyles } from './styles';
 import { getBookings, getInitialDate } from '../../services/apis';
 import { Booking, DateSection } from '../../services/types';
 import BookingCard from '../../components/booking-card';
+import BackButton from '../../components/back-button';
 
 const ITEMS_PER_PAGE = 25;
 
@@ -64,11 +65,13 @@ const Home: FC = () => {
   );
   
   const renderBooking = ({ item }: { item: Booking }) => (
-    <BookingCard
-      sport={item.sport}
-      startTime={item.startTime}
-      endTime={item.endTime}
-    />
+    <View style={styles.sectionContent}>
+      <BookingCard
+        sport={item.sport}
+        startTime={item.startTime}
+        endTime={item.endTime}
+      />
+    </View>
   );
   
   const renderFooter = () => {
@@ -94,6 +97,7 @@ const Home: FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <BackButton />
         <Text style={styles.title}>Home</Text>
       </View>
       

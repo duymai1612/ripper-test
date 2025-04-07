@@ -13,10 +13,15 @@ const BookingCard: FC<BookingCardProps> = ({
   const { colors } = useTheme();
   const styles = createStyles(colors);
 
+  const iconContainerStyle = {
+    ...styles.iconContainer,
+    backgroundColor: colors.iconBackground,
+  };
+
   return (
     <View style={styles.card}>
-      <View style={styles.iconContainer}>
-        <SportIcon sport={sport} size={24} />
+      <View style={iconContainerStyle}>
+        <SportIcon sport={sport} size={22} />
       </View>
       <View style={styles.contentContainer}>
         <Text style={styles.sportName}>{sport}</Text>

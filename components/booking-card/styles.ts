@@ -5,26 +5,21 @@ export const createStyles = (colors: {
   card: string;
   text: string;
   border: string;
+  iconBackground: string;
 }) => StyleSheet.create({
   card: {
     backgroundColor: colors.card,
     borderRadius: BORDER_RADIUS.md,
     padding: SPACING.md,
-    marginVertical: SPACING.sm,
     flexDirection: 'row',
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 2,
   },
   iconContainer: {
     marginRight: SPACING.md,
-    width: 40,
-    height: 40,
+    width: 36,
+    height: 36,
     borderRadius: BORDER_RADIUS.full,
-    backgroundColor: colors.border,
+    backgroundColor: colors.iconBackground,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -35,7 +30,7 @@ export const createStyles = (colors: {
     fontSize: FONT_SIZES.large,
     fontWeight: '600',
     color: colors.text,
-    marginBottom: SPACING.xs,
+    marginBottom: SPACING.xs / 2,
   },
   timeContainer: {
     flexDirection: 'row',

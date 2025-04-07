@@ -11,33 +11,37 @@ export const createStyles = (colors: {
     backgroundColor: colors.background,
   },
   header: {
-    padding: SPACING.md,
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.sm,
     flexDirection: 'row',
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: colors.text + '20',
+    borderBottomColor: colors.text + '10',
+  },
+  backButton: {
+    paddingRight: SPACING.sm,
   },
   title: {
     fontSize: FONT_SIZES.xlarge,
     fontWeight: 'bold',
     color: colors.text,
-    marginLeft: SPACING.md,
   },
   listContainer: {
-    flex: 1,
+    paddingBottom: SPACING.md,
   },
   dateHeader: {
     backgroundColor: colors.dateHeader,
-    padding: SPACING.md,
     paddingVertical: SPACING.sm,
   },
   dateText: {
     fontSize: FONT_SIZES.medium,
-    fontWeight: '600',
+    fontWeight: '500',
     color: colors.text,
+    textAlign: 'center',
   },
   sectionContent: {
-    padding: SPACING.md,
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.xs / 2,
   },
   loadingContainer: {
     padding: SPACING.lg,

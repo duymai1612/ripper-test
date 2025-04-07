@@ -9,17 +9,19 @@ export const COLORS = {
     disabledButton: '#CCCCCC',
     error: '#FF3B30',
     dateHeader: '#FFF0E3',
+    iconBackground: '#E0E0E0',
   },
   dark: {
     primary: '#FF8C38', // Keep the brand color consistent
     background: '#121212',
     text: '#FFFFFF',
-    card: '#1E1E1E',
+    card: '#2A2A2A',
     border: '#333333',
     buttonText: '#FFFFFF',
     disabledButton: '#666666',
     error: '#FF453A',
     dateHeader: '#333333',
+    iconBackground: '#444444',
   }
 };
 
