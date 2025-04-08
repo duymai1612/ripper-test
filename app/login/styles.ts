@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { FONT_SIZES, SPACING } from '../../services/constants';
+import { FONT_SIZES, SPACING, fontFamilies } from '../../services/constants';
 
 export const createStyles = (colors: {
   background: string;
@@ -25,6 +25,7 @@ export const createStyles = (colors: {
     fontWeight: 'bold',
     color: colors.text,
     marginBottom: SPACING.lg,
+    fontFamily: fontFamilies.semiBold,
   },
   form: {
     width: '100%',

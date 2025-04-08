@@ -3,7 +3,7 @@ export const COLORS = {
     primary: '#FF8C38', // Orange color from the Ripper logo
     background: '#FFFFFF',
     text: '#000000',
-    card: '#F5F5F5',
+    card: '#FFFFFF',
     border: '#E0E0E0',
     buttonText: '#FFFFFF',
     disabledButton: '#CCCCCC',
@@ -37,8 +37,8 @@ export const SPACING = {
   xs: 4,
   sm: 8,
   md: 16,
-  lg: 24,
-  xl: 32,
+  lg: 20,
+  xl: 24,
 };
 
 export const BORDER_RADIUS = {

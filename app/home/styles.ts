@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { FONT_SIZES, SPACING } from '../../services/constants';
+import { BORDER_RADIUS, SPACING, fontFamilies } from '../../services/constants';
 
 export const createStyles = (colors: {
   background: string;
@@ -22,9 +22,10 @@ export const createStyles = (colors: {
     paddingRight: SPACING.sm,
   },
   title: {
-    fontSize: FONT_SIZES.xlarge,
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontWeight: '600',
     color: colors.text,
+    fontFamily: fontFamilies.semiBold,
   },
   listContainer: {
     paddingBottom: SPACING.md,
@@ -34,14 +35,16 @@ export const createStyles = (colors: {
     paddingVertical: SPACING.sm,
   },
   dateText: {
-    fontSize: FONT_SIZES.medium,
+    fontSize: 14,
     fontWeight: '500',
     color: colors.text,
     textAlign: 'center',
+    fontFamily: fontFamilies.semiBold,
   },
   sectionContent: {
     paddingHorizontal: SPACING.md,
-    paddingVertical: SPACING.xs / 2,
+    paddingVertical: SPACING.xs,
+    marginBottom: SPACING.xs,
   },
   loadingContainer: {
     padding: SPACING.lg,
@@ -49,6 +52,7 @@ export const createStyles = (colors: {
   },
   loadingText: {
     color: colors.text,
-    fontSize: FONT_SIZES.medium,
+    fontSize: 14,
+    fontFamily: fontFamilies.regular,
   },
 }); 

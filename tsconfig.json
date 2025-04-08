@@ -11,5 +11,10 @@
       "@app/*": ["app/*"],
       "@assets/*": ["assets/*"]
     }
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "declarations.d.ts"
+  ]
 }

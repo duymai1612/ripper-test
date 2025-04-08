@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { BookingCardProps } from './types';
 import { createStyles } from './styles';
 import { useTheme } from '../../services/constants/ThemeContext';
@@ -15,7 +15,7 @@ const BookingCard: FC<BookingCardProps> = ({
 
   const iconContainerStyle = {
     ...styles.iconContainer,
-    backgroundColor: colors.iconBackground,
+    // backgroundColor: colors.iconBackground,
   };
 
   return (
@@ -23,13 +23,9 @@ const BookingCard: FC<BookingCardProps> = ({
       <View style={iconContainerStyle}>
         <SportIcon sport={sport} size={22} />
       </View>
-      <View style={styles.contentContainer}>
-        <Text style={styles.sportName}>{sport}</Text>
-        <View style={styles.timeContainer}>
-          <Text style={styles.time}>{startTime}</Text>
-          <Text style={styles.dash}>-</Text>
-          <Text style={styles.time}>{endTime}</Text>
-        </View>
+      <Text style={styles.sportName}>{sport}</Text>
+      <View style={styles.timeContainer}>
+        <Text style={styles.time}>{startTime} - {endTime}</Text>
       </View>
     </View>
   );

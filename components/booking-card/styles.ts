@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { BORDER_RADIUS, FONT_SIZES, SPACING } from '../../services/constants';
+import { BORDER_RADIUS, FONT_SIZES, SPACING, fontFamilies } from '../../services/constants';
 
 export const createStyles = (colors: {
   card: string;
@@ -13,6 +13,8 @@ export const createStyles = (colors: {
     padding: SPACING.md,
     flexDirection: 'row',
     alignItems: 'center',
+    borderColor: colors.border,
+    borderWidth: 0.5,
   },
   iconContainer: {
     marginRight: SPACING.md,
@@ -23,25 +25,20 @@ export const createStyles = (colors: {
     justifyContent: 'center',
     alignItems: 'center',
   },
-  contentContainer: {
-    flex: 1,
-  },
   sportName: {
-    fontSize: FONT_SIZES.large,
+    fontSize: 14,
     fontWeight: '600',
     color: colors.text,
-    marginBottom: SPACING.xs / 2,
+    flex: 1,
+    fontFamily: fontFamilies.semiBold,
   },
   timeContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-end',
   },
   time: {
-    fontSize: FONT_SIZES.medium,
+    fontSize: 14,
+    fontWeight: '500',
     color: colors.text + '99',
+    fontFamily: fontFamilies.regular,
   },
-  dash: {
-    marginHorizontal: SPACING.xs,
-    color: colors.text + '99',
-  }
 }); 

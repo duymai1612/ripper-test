@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import { View, Text, ActivityIndicator, SectionList } from 'react-native';
+import { View, Text, ActivityIndicator, SectionList, SafeAreaView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTheme } from '../../services/constants/ThemeContext';
 import { createStyles } from './styles';
 import { getBookings, getInitialDate } from '../../services/apis';
@@ -7,11 +9,19 @@ import { Booking, DateSection } from '../../services/types';
 import BookingCard from '../../components/booking-card';
 import BackButton from '../../components/back-button';
 
+type RootStackParamList = {
+  Login: undefined;
+  Home: undefined;
+};
+
+type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+
 const ITEMS_PER_PAGE = 25;
 
 const Home: FC = () => {
   const { colors } = useTheme();
   const styles = createStyles(colors);
+  const navigation = useNavigation<HomeScreenNavigationProp>();
   
   const [dateSections, setDateSections] = useState<DateSection[]>([]);
   const [loading, setLoading] = useState(true);
@@ -54,6 +64,10 @@ const Home: FC = () => {
     }
   };
   
+  const handleBackPress = () => {
+    navigation.goBack();
+  };
+  
   useEffect(() => {
     loadBookings(1);
   }, []);
@@ -87,17 +101,17 @@ const Home: FC = () => {
   
   if (loading) {
     return (
-      <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
+      <SafeAreaView style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
         <ActivityIndicator size="large" color={colors.primary} />
         <Text style={styles.loadingText}>Loading bookings...</Text>
-      </View>
+      </SafeAreaView>
     );
   }
   
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <BackButton />
+        <BackButton onPress={handleBackPress} />
         <Text style={styles.title}>Home</Text>
       </View>
       
@@ -112,7 +126,7 @@ const Home: FC = () => {
         ListFooterComponent={renderFooter}
         stickySectionHeadersEnabled={true}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
