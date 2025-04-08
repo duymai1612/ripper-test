@@ -21,7 +21,7 @@ const BookingCard: FC<BookingCardProps> = ({
   return (
     <View style={styles.card}>
       <View style={iconContainerStyle}>
-        <SportIcon sport={sport} size={22} />
+        <SportIcon sport={sport} size={28} />
       </View>
       <Text style={styles.sportName}>{sport}</Text>
       <View style={styles.timeContainer}>

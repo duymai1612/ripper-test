@@ -18,8 +18,6 @@ export const createStyles = (colors: {
   },
   iconContainer: {
     marginRight: SPACING.md,
-    width: 36,
-    height: 36,
     borderRadius: BORDER_RADIUS.full,
     backgroundColor: colors.iconBackground,
     justifyContent: 'center',
@@ -38,7 +36,6 @@ export const createStyles = (colors: {
   time: {
     fontSize: 14,
     fontWeight: '500',
-    color: colors.text + '99',
-    fontFamily: fontFamilies.regular,
+    fontFamily: fontFamilies.semiBold,
   },
 }); 

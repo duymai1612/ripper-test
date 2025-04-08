@@ -9,7 +9,7 @@ export const COLORS = {
     disabledButton: '#CCCCCC',
     error: '#FF3B30',
     dateHeader: '#FFF0E3',
-    iconBackground: '#E0E0E0',
+    iconBackground: '#FFFFFF',
   },
   dark: {
     primary: '#FF8C38', // Keep the brand color consistent
@@ -21,7 +21,7 @@ export const COLORS = {
     disabledButton: '#666666',
     error: '#FF453A',
     dateHeader: '#333333',
-    iconBackground: '#444444',
+    iconBackground: '#FFFFFF',
   }
 };
 
@@ -36,9 +36,10 @@ export const FONT_SIZES = {
 export const SPACING = {
   xs: 4,
   sm: 8,
-  md: 16,
-  lg: 20,
-  xl: 24,
+  md: 12,
+  lg: 16,
+  xl: 20,
+  xxl: 24,
 };
 
 export const BORDER_RADIUS = {

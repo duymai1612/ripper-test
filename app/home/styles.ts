@@ -33,6 +33,7 @@ export const createStyles = (colors: {
   dateHeader: {
     backgroundColor: colors.dateHeader,
     paddingVertical: SPACING.sm,
+    marginBottom: SPACING.xl,
   },
   dateText: {
     fontSize: 14,
@@ -42,9 +43,8 @@ export const createStyles = (colors: {
     fontFamily: fontFamilies.semiBold,
   },
   sectionContent: {
-    paddingHorizontal: SPACING.md,
-    paddingVertical: SPACING.xs,
-    marginBottom: SPACING.xs,
+    paddingHorizontal: SPACING.xl,
+    paddingBottom: SPACING.xl,
   },
   loadingContainer: {
     padding: SPACING.lg,
