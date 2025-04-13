@@ -31,11 +31,11 @@
 1. Clone the repository
 2. Install dependencies:
    ```
-   npm install
+   yarn install
    ```
 3. Start the development server:
    ```
-   npm start
+   yarn start
    ```
 
 ## Key Implementation Details
